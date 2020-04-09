@@ -2,23 +2,31 @@
 // das nostas entre os alunos e envia
 // mensagem do cálculo da média.
 
+const alunos = [
+  {
+    nome:"Paulo",
+    nota: 9.8
+  },
+  {
+    nome: "Ana",
+    nota: 10
+  },
+  {
+    nome: "Bruno",
+    nota: 2
+  }
+]
 
-const aluno01 = 'Jeriel'
-const notaAluno01 = 2.8
+const nomeDeAlunos = ["Paulo", "João", "André"]
+console.log(alunos[2])
 
-const aluno02 = 'Ana'
-const notaAluno02 = 10
+const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
 
-const aluno03 = 'Bruno'
-const notaAluno03 = 2 
-
-const media = (notaAluno01 + notaAluno02 + notaAluno03) / 3
-
-// Se a média for maior que 5, parebenizar a turma
-if (media > 5) {
-  // faz alguma coisa
-  console.log(`A média foi de ${media}. Parabéns`)
-} else {
-  // faz outra coisa
-  console.log(`A média foi de ${media}. Está abaixo de 5`)
-}
+// // Se a média for maior que 5, parebenizar a turma
+// if (media > 5) {
+//   // faz alguma coisa
+//   console.log(`A média foi de ${media}. Parabéns turma`)
+// } else {
+//   // faz outra coisa
+//   console.log(`A média foi de ${media}. Está abaixo de 5`)
+// }
