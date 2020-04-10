@@ -24,7 +24,7 @@ const alunosDaTurmaA = [
 const alunosDaTurmaB = [
   {
     nome:"Maria",
-    nota: 10
+    nota: 8
   },
   {
     nome: "Pedro",
@@ -67,3 +67,31 @@ function enviarMensagem(media, turma) {
 //Chamando a função enviarMensagem
  enviarMensagem(media1, 'turmaA')
  enviarMensagem(media2, 'turmaB')
+
+ //Marcar aluno como reprovado se a nota
+ //for menor que 5 
+function marcarComoReprovado (aluno) {
+  aluno.reprovado = false;
+    if(aluno.nota < 5) {
+      aluno.reprovado = true;
+    }
+}
+//Enviar uma mensagem para aluno reprovado
+function enviarMensagemReprovado(aluno) {
+  if(aluno.reprovado) {
+    console.log(`O Aluno ${aluno.nome} está reprovado!`)
+  }
+}
+//Aqui nesta função chamamos a função que marca o aluno como reprovado
+//e tbm chamamos a função que envia mensagem para o aluno reprovado
+function alunoReprovado(alunos) {
+  for (let aluno of alunos) {
+    marcarComoReprovado(aluno);
+    enviarMensagemReprovado(aluno)
+  }
+}
+
+// Chamamos então a função que marca e envia mensagem aos alunos reprovados
+//para as duas turmas que temos
+alunoReprovado(alunosDaTurmaA)
+alunoReprovado(alunosDaTurmaB)
